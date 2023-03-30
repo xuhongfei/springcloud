@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    config:
+      label: main
+      name: config  #配置文件名称，config-dev.yml 中的 config
+      profile: dev  #环境名  config-dev.yml 中的 dev
+      uri: http://localhost:8030 #Spring Cloud Config 服务端（配置中心）地址
+#      discovery:
+#        enabled: true
+#        serviceId: config-server
+#    bus:
+#      enabled: true
+#      trace:
+#        enabled: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+#rabbitmq:
+#  host: localhost
+#  port: 5672
+#  username: guest
+#  password: guest

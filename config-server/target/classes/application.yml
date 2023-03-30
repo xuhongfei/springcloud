@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: main
+      server:
+        git:
+          uri: https://github.com/xuhongfei/springcloudConfig.git
+          searchPaths: respo
+          forcePull: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
